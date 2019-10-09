@@ -10,17 +10,17 @@ function getFileSizeByBytes(int $bytes): string
     $bytesMB = 1048576;
     $bytesKB = 1024;
     if ($bytes >= $bytesGB) {
-        $bytes = number_format($bytes / $bytesGB, 2).' GB';
+        $size = number_format($bytes / $bytesGB, 2).' GB';
     } elseif ($bytes >= $bytesMB) {
-        $bytes = number_format($bytes / $bytesMB, 2).' MB';
+        $size = number_format($bytes / $bytesMB, 2).' MB';
     } elseif ($bytes >= $bytesKB) {
-        $bytes = number_format($bytes / $bytesKB, 2).' KB';
+        $size = number_format($bytes / $bytesKB, 2).' KB';
     } elseif ($bytes > 1) {
-        $bytes = $bytes.' bytes';
+        $size = $bytes.' bytes';
     } elseif ($bytes == 1) {
-        $bytes = $bytes.' byte';
+        $size = $bytes.' byte';
     } else {
-        $bytes = '0 bytes';
+        $size = '0 bytes';
     }
-    return $bytes;
+    return $size;
 }
