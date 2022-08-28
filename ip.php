@@ -1,6 +1,12 @@
 <?php
-function getClientIp()
-{
+
+declare( strict_types=1 );
+
+/**
+ * Función que devuelve el número IP
+ * @return string
+ */
+function getClientIp(): string {
     $ipaddress = '';
     if (getenv('HTTP_CLIENT_IP')) {
         $ipaddress = getenv('HTTP_CLIENT_IP');
