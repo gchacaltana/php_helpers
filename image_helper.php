@@ -54,6 +54,6 @@ function resizeImage(string $sourceImage, string $targetImage, int $maxWidth, in
  * @param string $image Ruta y nombre de imagen
  * @param string $mime Tipo MIME de la imagen
  */
-function getDataURI(string $image, string $mime = ""): string {
+function getImageDataUri(string $image, string $mime = ""): string {
     return 'data: ' . (function_exists('mime_content_type') ? mime_content_type($image) : $mime) . ';base64,' . base64_encode(file_get_contents($image));
 }
