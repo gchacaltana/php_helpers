@@ -23,6 +23,3 @@ function getLastDayOfDate(string $date): string {
     $d->modify('last day of this month');
     return $d->format('Y-m-d');
 }
-
-
-print(getLastDayOfDate(date('Y-m-d')));
